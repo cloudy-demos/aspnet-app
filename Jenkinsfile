@@ -1,6 +1,6 @@
 stage ('Build and SUT') {
     node {
-        git 'https://github.com/schottsfired/aspnet-app'
+        git 'https://github.com/cloudy-demos/aspnet-app'
         sh 'docker build -t aspnetapp .'
         sh 'docker run -it --rm -d --name aspnetapp -p 8000:80 aspnetapp'
     }
